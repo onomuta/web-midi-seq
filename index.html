@@ -1,30 +1,177 @@
 <style>
   .steps-container{display:table}
+  .beat{display:table-cell; width:20px; background:#eee; text-align: center}
   .btn{display:table-cell; width:20px; background:#eee; text-align: center}
   .active{background:#00ddff}
+  .beat.active{background:#ff0033}
 </style>
 <select id="select-midi-output-device"></select>
 <select id="select-midi-output-ch"></select>
 <div class="steps-container">
-  <div class="btn l01 b01" onclick="btn(this)" id="a01-01">-</div>
-  <div class="btn l01 b02" onclick="btn(this)" id="a01-02">-</div>
-  <div class="btn l01 b03" onclick="btn(this)" id="a01-03">-</div>
-  <div class="btn l01 b04" onclick="btn(this)" id="a01-04">-</div>
-  <div class="btn l01 b05" onclick="btn(this)" id="a01-05">-</div>
-  <div class="btn l01 b06" onclick="btn(this)" id="a01-06">-</div>
-  <div class="btn l01 b07" onclick="btn(this)" id="a01-07">-</div>
-  <div class="btn l01 b08" onclick="btn(this)" id="a01-08">-</div>
-  <div class="btn l01 b09" onclick="btn(this)" id="a01-09">-</div>
-  <div class="btn l01 b10" onclick="btn(this)" id="a01-10">-</div>
-  <div class="btn l01 b11" onclick="btn(this)" id="a01-11">-</div>
-  <div class="btn l01 b12" onclick="btn(this)" id="a01-12">-</div>
-  <div class="btn l01 b13" onclick="btn(this)" id="a01-13">-</div>
-  <div class="btn l01 b14" onclick="btn(this)" id="a01-14">-</div>
-  <div class="btn l01 b15" onclick="btn(this)" id="a01-15">-</div>
-  <div class="btn l01 b16" onclick="btn(this)" id="a01-16">-</div>
+  <div class="beat b00">-</div>
+  <div class="beat b01">-</div>
+  <div class="beat b02">-</div>
+  <div class="beat b03">-</div>
+  <div class="beat b04">-</div>
+  <div class="beat b05">-</div>
+  <div class="beat b06">-</div>
+  <div class="beat b07">-</div>
+  <div class="beat b08">-</div>
+  <div class="beat b09">-</div>
+  <div class="beat b10">-</div>
+  <div class="beat b11">-</div>
+  <div class="beat b12">-</div>
+  <div class="beat b13">-</div>
+  <div class="beat b14">-</div>
+  <div class="beat b15">-</div>
 </div>
+<div class="steps-container">
+  <div class="btn l00 b00" onclick="btn(this)">-</div>
+  <div class="btn l00 b01" onclick="btn(this)">-</div>
+  <div class="btn l00 b02" onclick="btn(this)">-</div>
+  <div class="btn l00 b03" onclick="btn(this)">-</div>
+  <div class="btn l00 b04" onclick="btn(this)">-</div>
+  <div class="btn l00 b05" onclick="btn(this)">-</div>
+  <div class="btn l00 b06" onclick="btn(this)">-</div>
+  <div class="btn l00 b07" onclick="btn(this)">-</div>
+  <div class="btn l00 b08" onclick="btn(this)">-</div>
+  <div class="btn l00 b09" onclick="btn(this)">-</div>
+  <div class="btn l00 b10" onclick="btn(this)">-</div>
+  <div class="btn l00 b11" onclick="btn(this)">-</div>
+  <div class="btn l00 b12" onclick="btn(this)">-</div>
+  <div class="btn l00 b13" onclick="btn(this)">-</div>
+  <div class="btn l00 b14" onclick="btn(this)">-</div>
+  <div class="btn l00 b15" onclick="btn(this)">-</div>
+</div>
+<div class="steps-container">
+  <div class="btn l01 b00" onclick="btn(this)">-</div>
+  <div class="btn l01 b01" onclick="btn(this)">-</div>
+  <div class="btn l01 b02" onclick="btn(this)">-</div>
+  <div class="btn l01 b03" onclick="btn(this)">-</div>
+  <div class="btn l01 b04" onclick="btn(this)">-</div>
+  <div class="btn l01 b05" onclick="btn(this)">-</div>
+  <div class="btn l01 b06" onclick="btn(this)">-</div>
+  <div class="btn l01 b07" onclick="btn(this)">-</div>
+  <div class="btn l01 b08" onclick="btn(this)">-</div>
+  <div class="btn l01 b09" onclick="btn(this)">-</div>
+  <div class="btn l01 b10" onclick="btn(this)">-</div>
+  <div class="btn l01 b11" onclick="btn(this)">-</div>
+  <div class="btn l01 b12" onclick="btn(this)">-</div>
+  <div class="btn l01 b13" onclick="btn(this)">-</div>
+  <div class="btn l01 b14" onclick="btn(this)">-</div>
+  <div class="btn l01 b15" onclick="btn(this)">-</div>
+</div>
+<div class="steps-container">
+  <div class="btn l02 b00" onclick="btn(this)">-</div>
+  <div class="btn l02 b01" onclick="btn(this)">-</div>
+  <div class="btn l02 b02" onclick="btn(this)">-</div>
+  <div class="btn l02 b03" onclick="btn(this)">-</div>
+  <div class="btn l02 b04" onclick="btn(this)">-</div>
+  <div class="btn l02 b05" onclick="btn(this)">-</div>
+  <div class="btn l02 b06" onclick="btn(this)">-</div>
+  <div class="btn l02 b07" onclick="btn(this)">-</div>
+  <div class="btn l02 b08" onclick="btn(this)">-</div>
+  <div class="btn l02 b09" onclick="btn(this)">-</div>
+  <div class="btn l02 b10" onclick="btn(this)">-</div>
+  <div class="btn l02 b11" onclick="btn(this)">-</div>
+  <div class="btn l02 b12" onclick="btn(this)">-</div>
+  <div class="btn l02 b13" onclick="btn(this)">-</div>
+  <div class="btn l02 b14" onclick="btn(this)">-</div>
+  <div class="btn l02 b15" onclick="btn(this)">-</div>
+</div>
+<div class="steps-container">
+  <div class="btn l03 b00" onclick="btn(this)">-</div>
+  <div class="btn l03 b01" onclick="btn(this)">-</div>
+  <div class="btn l03 b02" onclick="btn(this)">-</div>
+  <div class="btn l03 b03" onclick="btn(this)">-</div>
+  <div class="btn l03 b04" onclick="btn(this)">-</div>
+  <div class="btn l03 b05" onclick="btn(this)">-</div>
+  <div class="btn l03 b06" onclick="btn(this)">-</div>
+  <div class="btn l03 b07" onclick="btn(this)">-</div>
+  <div class="btn l03 b08" onclick="btn(this)">-</div>
+  <div class="btn l03 b09" onclick="btn(this)">-</div>
+  <div class="btn l03 b10" onclick="btn(this)">-</div>
+  <div class="btn l03 b11" onclick="btn(this)">-</div>
+  <div class="btn l03 b12" onclick="btn(this)">-</div>
+  <div class="btn l03 b13" onclick="btn(this)">-</div>
+  <div class="btn l03 b14" onclick="btn(this)">-</div>
+  <div class="btn l03 b15" onclick="btn(this)">-</div>
+</div>
+<div class="steps-container">
+  <div class="btn l04 b00" onclick="btn(this)">-</div>
+  <div class="btn l04 b01" onclick="btn(this)">-</div>
+  <div class="btn l04 b02" onclick="btn(this)">-</div>
+  <div class="btn l04 b03" onclick="btn(this)">-</div>
+  <div class="btn l04 b04" onclick="btn(this)">-</div>
+  <div class="btn l04 b05" onclick="btn(this)">-</div>
+  <div class="btn l04 b06" onclick="btn(this)">-</div>
+  <div class="btn l04 b07" onclick="btn(this)">-</div>
+  <div class="btn l04 b08" onclick="btn(this)">-</div>
+  <div class="btn l04 b09" onclick="btn(this)">-</div>
+  <div class="btn l04 b10" onclick="btn(this)">-</div>
+  <div class="btn l04 b11" onclick="btn(this)">-</div>
+  <div class="btn l04 b12" onclick="btn(this)">-</div>
+  <div class="btn l04 b13" onclick="btn(this)">-</div>
+  <div class="btn l04 b14" onclick="btn(this)">-</div>
+  <div class="btn l04 b15" onclick="btn(this)">-</div>
+</div>
+<div class="steps-container">
+  <div class="btn l05 b00" onclick="btn(this)">-</div>
+  <div class="btn l05 b01" onclick="btn(this)">-</div>
+  <div class="btn l05 b02" onclick="btn(this)">-</div>
+  <div class="btn l05 b03" onclick="btn(this)">-</div>
+  <div class="btn l05 b04" onclick="btn(this)">-</div>
+  <div class="btn l05 b05" onclick="btn(this)">-</div>
+  <div class="btn l05 b06" onclick="btn(this)">-</div>
+  <div class="btn l05 b07" onclick="btn(this)">-</div>
+  <div class="btn l05 b08" onclick="btn(this)">-</div>
+  <div class="btn l05 b09" onclick="btn(this)">-</div>
+  <div class="btn l05 b10" onclick="btn(this)">-</div>
+  <div class="btn l05 b11" onclick="btn(this)">-</div>
+  <div class="btn l05 b12" onclick="btn(this)">-</div>
+  <div class="btn l05 b13" onclick="btn(this)">-</div>
+  <div class="btn l05 b14" onclick="btn(this)">-</div>
+  <div class="btn l05 b15" onclick="btn(this)">-</div>
+</div>
+<div class="steps-container">
+  <div class="btn l06 b00" onclick="btn(this)">-</div>
+  <div class="btn l06 b01" onclick="btn(this)">-</div>
+  <div class="btn l06 b02" onclick="btn(this)">-</div>
+  <div class="btn l06 b03" onclick="btn(this)">-</div>
+  <div class="btn l06 b04" onclick="btn(this)">-</div>
+  <div class="btn l06 b05" onclick="btn(this)">-</div>
+  <div class="btn l06 b06" onclick="btn(this)">-</div>
+  <div class="btn l06 b07" onclick="btn(this)">-</div>
+  <div class="btn l06 b08" onclick="btn(this)">-</div>
+  <div class="btn l06 b09" onclick="btn(this)">-</div>
+  <div class="btn l06 b10" onclick="btn(this)">-</div>
+  <div class="btn l06 b11" onclick="btn(this)">-</div>
+  <div class="btn l06 b12" onclick="btn(this)">-</div>
+  <div class="btn l06 b13" onclick="btn(this)">-</div>
+  <div class="btn l06 b14" onclick="btn(this)">-</div>
+  <div class="btn l06 b15" onclick="btn(this)">-</div>
+</div>
+<!-- <div class="steps-container">
+  <div class="btn l02 b00" onclick="btn(this)" id="a02-00">-</div>
+  <div class="btn l02 b01" onclick="btn(this)" id="a02-01">-</div>
+  <div class="btn l02 b02" onclick="btn(this)" id="a02-02">-</div>
+  <div class="btn l02 b03" onclick="btn(this)" id="a02-03">-</div>
+  <div class="btn l02 b04" onclick="btn(this)" id="a02-04">-</div>
+  <div class="btn l02 b05" onclick="btn(this)" id="a02-05">-</div>
+  <div class="btn l02 b06" onclick="btn(this)" id="a02-06">-</div>
+  <div class="btn l02 b07" onclick="btn(this)" id="a02-07">-</div>
+  <div class="btn l02 b08" onclick="btn(this)" id="a02-08">-</div>
+  <div class="btn l02 b09" onclick="btn(this)" id="a02-09">-</div>
+  <div class="btn l02 b10" onclick="btn(this)" id="a02-10">-</div>
+  <div class="btn l02 b11" onclick="btn(this)" id="a02-11">-</div>
+  <div class="btn l02 b12" onclick="btn(this)" id="a02-12">-</div>
+  <div class="btn l02 b13" onclick="btn(this)" id="a02-13">-</div>
+  <div class="btn l02 b14" onclick="btn(this)" id="a02-14">-</div>
+  <div class="btn l02 b15" onclick="btn(this)" id="a02-15">-</div>
+</div> -->
 
-<div class="" onclick="hyoji()">xxxx</div>
+<div class="" onclick="tmrOff()">STOP</div>
+<div class="" onclick="play()">PLAY</div>
 
 <script>
 var step = 0;
@@ -33,15 +180,19 @@ function btn(ele) {
   ele.classList.toggle('active');
 }
 
-function hyoji(num) {
+function trigger(num) {
   num = ('00' + num).slice(-2);
   var target = document.getElementsByClassName( "btn b" + num  );
 
   for (let i = 0; i < target.length; i++) {
-    if(target[i].classList.contains('active')){
-      console.log(num + "-"+127);
-    }else{
-      console.log(num + "-"+0);      
+    if(target[i].classList.contains('l' + ('00' + i).slice(-2))){
+      if(target[i].classList.contains('active')){
+        console.log(i + "-" + num + "-"+127);
+        sendCC(i,127);
+      }else{
+        console.log(i + "-" + num + "-"+0);   
+        sendCC(i,0);         
+      }
     }
   }
 }
@@ -51,14 +202,27 @@ var step = 0;
 play();
 //setInterval()を使ったタイマーの起動関数
 function play(){
-  timer1 = setInterval("tmrOn()",469);
+  timer1 = setInterval("tmrOn()",469/4);
 }
 function tmrOn(){
   step = (step + 1)%16;
-  hyoji(step);
+  trigger(step);
+  beatDisp();
 }
 function tmrOff(){
   clearInterval(timer1);
+}
+
+
+// 現在拍表示
+function beatDisp(){
+  var beats = document.getElementsByClassName( "beat" );
+  beats[step].classList.add('active');
+  if(step==0){
+    beats[15].classList.remove('active');
+  }else{
+    beats[step-1].classList.remove('active');
+  }
 }
 
 </script>

@@ -1,201 +1,210 @@
 <style>
   .steps-container{display:table}
-  .beat{display:table-cell; width:20px; background:#eee; text-align: center}
-  .btn{display:table-cell; width:20px; background:#eee; text-align: center}
-  .active{background:#00ddff}
-  .beat.active{background:#ff0033}
+  .slider-container>*{vertical-align: middle}
+  .btn{display:table-cell; width:20px; background:#333; text-align: center; border: solid 2px #999; cursor: pointer; height:20px}
+  .active .btn{background:#aaa}
+  .active .slider{ opacity: 0.7}
+  .disp-note{ color:#eee;opacity: 0.2;width:30px;display: inline-block;text-align: right}
+  .active .disp-note{ opacity: 1}
+
+  .beat {background:#333}
+  .beat.active{background:#666}
+  
+  .slider {
+    -webkit-appearance: none;
+    height: 22px;
+    width:240px;
+    background: #333;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin:0;
+  }
+  .slider:hover {
+    opacity: 1;
+  }
+  .active .slider::-webkit-slider-thumb{
+    opacity: 1;
+  }
+  .slider::-webkit-slider-thumb {
+      opacity: 0.1;
+      -webkit-appearance: none;
+      appearance: none;
+      width: 22px;
+      height: 22px;
+      background: #eee;
+      cursor: pointer;
+  }
 </style>
+<body style="background:#111; margin:0">
 <select id="select-midi-output-device"></select>
 <select id="select-midi-output-ch"></select>
-<div class="steps-container">
-  <div class="beat b00">-</div>
-  <div class="beat b01">-</div>
-  <div class="beat b02">-</div>
-  <div class="beat b03">-</div>
-  <div class="beat b04">-</div>
-  <div class="beat b05">-</div>
-  <div class="beat b06">-</div>
-  <div class="beat b07">-</div>
-  <div class="beat b08">-</div>
-  <div class="beat b09">-</div>
-  <div class="beat b10">-</div>
-  <div class="beat b11">-</div>
-  <div class="beat b12">-</div>
-  <div class="beat b13">-</div>
-  <div class="beat b14">-</div>
-  <div class="beat b15">-</div>
-</div>
-<div class="steps-container">
-  <div class="btn l00 b00" onclick="btn(this)">-</div>
-  <div class="btn l00 b01" onclick="btn(this)">-</div>
-  <div class="btn l00 b02" onclick="btn(this)">-</div>
-  <div class="btn l00 b03" onclick="btn(this)">-</div>
-  <div class="btn l00 b04" onclick="btn(this)">-</div>
-  <div class="btn l00 b05" onclick="btn(this)">-</div>
-  <div class="btn l00 b06" onclick="btn(this)">-</div>
-  <div class="btn l00 b07" onclick="btn(this)">-</div>
-  <div class="btn l00 b08" onclick="btn(this)">-</div>
-  <div class="btn l00 b09" onclick="btn(this)">-</div>
-  <div class="btn l00 b10" onclick="btn(this)">-</div>
-  <div class="btn l00 b11" onclick="btn(this)">-</div>
-  <div class="btn l00 b12" onclick="btn(this)">-</div>
-  <div class="btn l00 b13" onclick="btn(this)">-</div>
-  <div class="btn l00 b14" onclick="btn(this)">-</div>
-  <div class="btn l00 b15" onclick="btn(this)">-</div>
-</div>
-<div class="steps-container">
-  <div class="btn l01 b00" onclick="btn(this)">-</div>
-  <div class="btn l01 b01" onclick="btn(this)">-</div>
-  <div class="btn l01 b02" onclick="btn(this)">-</div>
-  <div class="btn l01 b03" onclick="btn(this)">-</div>
-  <div class="btn l01 b04" onclick="btn(this)">-</div>
-  <div class="btn l01 b05" onclick="btn(this)">-</div>
-  <div class="btn l01 b06" onclick="btn(this)">-</div>
-  <div class="btn l01 b07" onclick="btn(this)">-</div>
-  <div class="btn l01 b08" onclick="btn(this)">-</div>
-  <div class="btn l01 b09" onclick="btn(this)">-</div>
-  <div class="btn l01 b10" onclick="btn(this)">-</div>
-  <div class="btn l01 b11" onclick="btn(this)">-</div>
-  <div class="btn l01 b12" onclick="btn(this)">-</div>
-  <div class="btn l01 b13" onclick="btn(this)">-</div>
-  <div class="btn l01 b14" onclick="btn(this)">-</div>
-  <div class="btn l01 b15" onclick="btn(this)">-</div>
-</div>
-<div class="steps-container">
-  <div class="btn l02 b00" onclick="btn(this)">-</div>
-  <div class="btn l02 b01" onclick="btn(this)">-</div>
-  <div class="btn l02 b02" onclick="btn(this)">-</div>
-  <div class="btn l02 b03" onclick="btn(this)">-</div>
-  <div class="btn l02 b04" onclick="btn(this)">-</div>
-  <div class="btn l02 b05" onclick="btn(this)">-</div>
-  <div class="btn l02 b06" onclick="btn(this)">-</div>
-  <div class="btn l02 b07" onclick="btn(this)">-</div>
-  <div class="btn l02 b08" onclick="btn(this)">-</div>
-  <div class="btn l02 b09" onclick="btn(this)">-</div>
-  <div class="btn l02 b10" onclick="btn(this)">-</div>
-  <div class="btn l02 b11" onclick="btn(this)">-</div>
-  <div class="btn l02 b12" onclick="btn(this)">-</div>
-  <div class="btn l02 b13" onclick="btn(this)">-</div>
-  <div class="btn l02 b14" onclick="btn(this)">-</div>
-  <div class="btn l02 b15" onclick="btn(this)">-</div>
-</div>
-<div class="steps-container">
-  <div class="btn l03 b00" onclick="btn(this)">-</div>
-  <div class="btn l03 b01" onclick="btn(this)">-</div>
-  <div class="btn l03 b02" onclick="btn(this)">-</div>
-  <div class="btn l03 b03" onclick="btn(this)">-</div>
-  <div class="btn l03 b04" onclick="btn(this)">-</div>
-  <div class="btn l03 b05" onclick="btn(this)">-</div>
-  <div class="btn l03 b06" onclick="btn(this)">-</div>
-  <div class="btn l03 b07" onclick="btn(this)">-</div>
-  <div class="btn l03 b08" onclick="btn(this)">-</div>
-  <div class="btn l03 b09" onclick="btn(this)">-</div>
-  <div class="btn l03 b10" onclick="btn(this)">-</div>
-  <div class="btn l03 b11" onclick="btn(this)">-</div>
-  <div class="btn l03 b12" onclick="btn(this)">-</div>
-  <div class="btn l03 b13" onclick="btn(this)">-</div>
-  <div class="btn l03 b14" onclick="btn(this)">-</div>
-  <div class="btn l03 b15" onclick="btn(this)">-</div>
-</div>
-<div class="steps-container">
-  <div class="btn l04 b00" onclick="btn(this)">-</div>
-  <div class="btn l04 b01" onclick="btn(this)">-</div>
-  <div class="btn l04 b02" onclick="btn(this)">-</div>
-  <div class="btn l04 b03" onclick="btn(this)">-</div>
-  <div class="btn l04 b04" onclick="btn(this)">-</div>
-  <div class="btn l04 b05" onclick="btn(this)">-</div>
-  <div class="btn l04 b06" onclick="btn(this)">-</div>
-  <div class="btn l04 b07" onclick="btn(this)">-</div>
-  <div class="btn l04 b08" onclick="btn(this)">-</div>
-  <div class="btn l04 b09" onclick="btn(this)">-</div>
-  <div class="btn l04 b10" onclick="btn(this)">-</div>
-  <div class="btn l04 b11" onclick="btn(this)">-</div>
-  <div class="btn l04 b12" onclick="btn(this)">-</div>
-  <div class="btn l04 b13" onclick="btn(this)">-</div>
-  <div class="btn l04 b14" onclick="btn(this)">-</div>
-  <div class="btn l04 b15" onclick="btn(this)">-</div>
-</div>
-<div class="steps-container">
-  <div class="btn l05 b00" onclick="btn(this)">-</div>
-  <div class="btn l05 b01" onclick="btn(this)">-</div>
-  <div class="btn l05 b02" onclick="btn(this)">-</div>
-  <div class="btn l05 b03" onclick="btn(this)">-</div>
-  <div class="btn l05 b04" onclick="btn(this)">-</div>
-  <div class="btn l05 b05" onclick="btn(this)">-</div>
-  <div class="btn l05 b06" onclick="btn(this)">-</div>
-  <div class="btn l05 b07" onclick="btn(this)">-</div>
-  <div class="btn l05 b08" onclick="btn(this)">-</div>
-  <div class="btn l05 b09" onclick="btn(this)">-</div>
-  <div class="btn l05 b10" onclick="btn(this)">-</div>
-  <div class="btn l05 b11" onclick="btn(this)">-</div>
-  <div class="btn l05 b12" onclick="btn(this)">-</div>
-  <div class="btn l05 b13" onclick="btn(this)">-</div>
-  <div class="btn l05 b14" onclick="btn(this)">-</div>
-  <div class="btn l05 b15" onclick="btn(this)">-</div>
-</div>
-<div class="steps-container">
-  <div class="btn l06 b00" onclick="btn(this)">-</div>
-  <div class="btn l06 b01" onclick="btn(this)">-</div>
-  <div class="btn l06 b02" onclick="btn(this)">-</div>
-  <div class="btn l06 b03" onclick="btn(this)">-</div>
-  <div class="btn l06 b04" onclick="btn(this)">-</div>
-  <div class="btn l06 b05" onclick="btn(this)">-</div>
-  <div class="btn l06 b06" onclick="btn(this)">-</div>
-  <div class="btn l06 b07" onclick="btn(this)">-</div>
-  <div class="btn l06 b08" onclick="btn(this)">-</div>
-  <div class="btn l06 b09" onclick="btn(this)">-</div>
-  <div class="btn l06 b10" onclick="btn(this)">-</div>
-  <div class="btn l06 b11" onclick="btn(this)">-</div>
-  <div class="btn l06 b12" onclick="btn(this)">-</div>
-  <div class="btn l06 b13" onclick="btn(this)">-</div>
-  <div class="btn l06 b14" onclick="btn(this)">-</div>
-  <div class="btn l06 b15" onclick="btn(this)">-</div>
-</div>
-<!-- <div class="steps-container">
-  <div class="btn l02 b00" onclick="btn(this)" id="a02-00">-</div>
-  <div class="btn l02 b01" onclick="btn(this)" id="a02-01">-</div>
-  <div class="btn l02 b02" onclick="btn(this)" id="a02-02">-</div>
-  <div class="btn l02 b03" onclick="btn(this)" id="a02-03">-</div>
-  <div class="btn l02 b04" onclick="btn(this)" id="a02-04">-</div>
-  <div class="btn l02 b05" onclick="btn(this)" id="a02-05">-</div>
-  <div class="btn l02 b06" onclick="btn(this)" id="a02-06">-</div>
-  <div class="btn l02 b07" onclick="btn(this)" id="a02-07">-</div>
-  <div class="btn l02 b08" onclick="btn(this)" id="a02-08">-</div>
-  <div class="btn l02 b09" onclick="btn(this)" id="a02-09">-</div>
-  <div class="btn l02 b10" onclick="btn(this)" id="a02-10">-</div>
-  <div class="btn l02 b11" onclick="btn(this)" id="a02-11">-</div>
-  <div class="btn l02 b12" onclick="btn(this)" id="a02-12">-</div>
-  <div class="btn l02 b13" onclick="btn(this)" id="a02-13">-</div>
-  <div class="btn l02 b14" onclick="btn(this)" id="a02-14">-</div>
-  <div class="btn l02 b15" onclick="btn(this)" id="a02-15">-</div>
-</div> -->
 
 <div class="" onclick="tmrOff()">STOP</div>
 <div class="" onclick="play()">PLAY</div>
+<div style="width:330px; margin:auto">
+  <div class="slider-container sc00">
+    <div class="disp-note" id="dispNote00">0</div>
+    <input class="slider" id="noteSlider00" type="range" min="0" max="40" value="0" onclick="btnOn(this)" >
+    <div class="btn b00" style="display:inline-block" onclick="btn(this)"></div>
+  </div>
+  <div class="slider-container sc01">
+    <div class="disp-note" id="dispNote01">0</div>
+    <input class="slider" id="noteSlider01" type="range" min="0" max="40" value="0" onclick="btnOn(this)" >
+    <div class="btn b01" style="display:inline-block" onclick="btn(this)"></div>
+  </div>
+  <div class="slider-container sc02">
+    <div class="disp-note" id="dispNote02">0</div>
+    <input class="slider" id="noteSlider02" type="range" min="0" max="40" value="0" onclick="btnOn(this)" >
+    <div class="btn b02" style="display:inline-block" onclick="btn(this)"></div>
+  </div>
+  <div class="slider-container sc03">
+    <div class="disp-note" id="dispNote03">0</div>
+    <input class="slider" id="noteSlider03" type="range" min="0" max="40" value="0" onclick="btnOn(this)" >
+    <div class="btn b03" style="display:inline-block" onclick="btn(this)"></div>
+  </div>
+  <div class="slider-container sc04">
+    <div class="disp-note" id="dispNote04">0</div>
+    <input class="slider" id="noteSlider04" type="range" min="0" max="40" value="0" onclick="btnOn(this)" >
+    <div class="btn b04" style="display:inline-block" onclick="btn(this)"></div>
+  </div>
+  <div class="slider-container sc05">
+    <div class="disp-note" id="dispNote05">0</div>
+    <input class="slider" id="noteSlider05" type="range" min="0" max="40" value="0" onclick="btnOn(this)" >
+    <div class="btn b05" style="display:inline-block" onclick="btn(this)"></div>
+  </div>
+  <div class="slider-container sc06">
+    <div class="disp-note" id="dispNote06">0</div>
+    <input class="slider" id="noteSlider06" type="range" min="0" max="40" value="0" onclick="btnOn(this)" >
+    <div class="btn b06" style="display:inline-block" onclick="btn(this)"></div>
+  </div>
+  <div class="slider-container sc07">
+    <div class="disp-note" id="dispNote07">0</div>
+    <input class="slider" id="noteSlider07" type="range" min="0" max="40" value="0" onclick="btnOn(this)" >
+    <div class="btn b07" style="display:inline-block" onclick="btn(this)"></div>
+  </div>
+  <div class="slider-container sc08">
+    <div class="disp-note" id="dispNote08">0</div>
+    <input class="slider" id="noteSlider08" type="range" min="0" max="40" value="0" onclick="btnOn(this)" >
+    <div class="btn b08" style="display:inline-block" onclick="btn(this)"></div>
+  </div>
+  <div class="slider-container sc09">
+    <div class="disp-note" id="dispNote09">0</div>
+    <input class="slider" id="noteSlider09" type="range" min="0" max="40" value="0" onclick="btnOn(this)" >
+    <div class="btn b09" style="display:inline-block" onclick="btn(this)"></div>
+  </div>
+  <div class="slider-container sc10">
+    <div class="disp-note" id="dispNote10">0</div>
+    <input class="slider" id="noteSlider10" type="range" min="0" max="40" value="0" onclick="btnOn(this)" >
+    <div class="btn b10" style="display:inline-block" onclick="btn(this)"></div>
+  </div>
+  <div class="slider-container sc11">
+    <div class="disp-note" id="dispNote11">0</div>
+    <input class="slider" id="noteSlider11" type="range" min="0" max="40" value="0" onclick="btnOn(this)" >
+    <div class="btn b11" style="display:inline-block" onclick="btn(this)"></div>
+  </div>
+  <div class="slider-container sc12">
+    <div class="disp-note" id="dispNote12">0</div>
+    <input class="slider" id="noteSlider12" type="range" min="0" max="40" value="0" onclick="btnOn(this)" >
+    <div class="btn b12" style="display:inline-block" onclick="btn(this)"></div>
+  </div>
+  <div class="slider-container sc13">
+    <div class="disp-note" id="dispNote13">0</div>
+    <input class="slider" id="noteSlider13" type="range" min="0" max="40" value="0" onclick="btnOn(this)" >
+    <div class="btn b13" style="display:inline-block" onclick="btn(this)"></div>
+  </div>
+  <div class="slider-container sc14">
+    <div class="disp-note" id="dispNote14">0</div>
+    <input class="slider" id="noteSlider14" type="range" min="0" max="40" value="0" onclick="btnOn(this)" >
+    <div class="btn b14" style="display:inline-block" onclick="btn(this)"></div>
+  </div>
+  <div class="slider-container sc15">
+    <div class="disp-note" id="dispNote15">0</div>
+    <input class="slider" id="noteSlider15" type="range" min="0" max="40" value="0" onclick="btnOn(this)" >
+    <div class="btn b15" style="display:inline-block" onclick="btn(this)"></div>
+  </div>
+</div>
+
 
 <script>
+
+const noteSlider00 = document.getElementById("noteSlider00")
+const noteSlider01 = document.getElementById("noteSlider01")
+const noteSlider02 = document.getElementById("noteSlider02")
+const noteSlider03 = document.getElementById("noteSlider03")
+const noteSlider04 = document.getElementById("noteSlider04")
+const noteSlider05 = document.getElementById("noteSlider05")
+const noteSlider06 = document.getElementById("noteSlider06")
+const noteSlider07 = document.getElementById("noteSlider07")
+const noteSlider08 = document.getElementById("noteSlider08")
+const noteSlider09 = document.getElementById("noteSlider09")
+const noteSlider10 = document.getElementById("noteSlider10")
+const noteSlider11 = document.getElementById("noteSlider11")
+const noteSlider12 = document.getElementById("noteSlider12")
+const noteSlider13 = document.getElementById("noteSlider13")
+const noteSlider14 = document.getElementById("noteSlider14")
+const noteSlider15 = document.getElementById("noteSlider15")
+
+const sliderValOut00 = document.getElementById("dispNote00")
+const sliderValOut01 = document.getElementById("dispNote01")
+const sliderValOut02 = document.getElementById("dispNote02")
+const sliderValOut03 = document.getElementById("dispNote03")
+const sliderValOut04 = document.getElementById("dispNote04")
+const sliderValOut05 = document.getElementById("dispNote05")
+const sliderValOut06 = document.getElementById("dispNote06")
+const sliderValOut07 = document.getElementById("dispNote07")
+const sliderValOut08 = document.getElementById("dispNote08")
+const sliderValOut09 = document.getElementById("dispNote09")
+const sliderValOut10 = document.getElementById("dispNote10")
+const sliderValOut11 = document.getElementById("dispNote11")
+const sliderValOut12 = document.getElementById("dispNote12")
+const sliderValOut13 = document.getElementById("dispNote13")
+const sliderValOut14 = document.getElementById("dispNote14")
+const sliderValOut15 = document.getElementById("dispNote15")
+
+noteSlider00.oninput = function() {sliderValOut00.innerHTML = this.value}
+noteSlider01.oninput = function() {sliderValOut01.innerHTML = this.value}
+noteSlider02.oninput = function() {sliderValOut02.innerHTML = this.value}
+noteSlider03.oninput = function() {sliderValOut03.innerHTML = this.value}
+noteSlider04.oninput = function() {sliderValOut04.innerHTML = this.value}
+noteSlider05.oninput = function() {sliderValOut05.innerHTML = this.value}
+noteSlider06.oninput = function() {sliderValOut06.innerHTML = this.value}
+noteSlider07.oninput = function() {sliderValOut07.innerHTML = this.value}
+noteSlider08.oninput = function() {sliderValOut08.innerHTML = this.value}
+noteSlider09.oninput = function() {sliderValOut09.innerHTML = this.value}
+noteSlider10.oninput = function() {sliderValOut10.innerHTML = this.value}
+noteSlider11.oninput = function() {sliderValOut11.innerHTML = this.value}
+noteSlider12.oninput = function() {sliderValOut12.innerHTML = this.value}
+noteSlider13.oninput = function() {sliderValOut13.innerHTML = this.value}
+noteSlider14.oninput = function() {sliderValOut14.innerHTML = this.value}
+noteSlider15.oninput = function() {sliderValOut15.innerHTML = this.value}
+
 var step = 0;
 
 function btn(ele) {
-  ele.classList.toggle('active');
+  // ele.classList.toggle('active');
+  ele.parentNode.classList.toggle('active');
+}
+function btnOn(ele) {
+  ele.parentNode.classList.add('active');
 }
 
-function trigger(num) {
-  num = ('00' + num).slice(-2);
-  var target = document.getElementsByClassName( "btn b" + num  );
 
-  for (let i = 0; i < target.length; i++) {
-    if(target[i].classList.contains('l' + ('00' + i).slice(-2))){
-      if(target[i].classList.contains('active')){
-        console.log(i + "-" + num + "-"+127);
-        sendCC(i,127);
-      }else{
-        console.log(i + "-" + num + "-"+0);   
-        sendCC(i,0);         
-      }
-    }
+let preNote;
+function trigger(num) {
+  sendNoteOff(preNote)
+  num = ('00' + num).slice(-2);
+  var target = document.getElementsByClassName( "slider-container sc" + num);
+  var targetNote = document.getElementById("noteSlider" + num);
+  if(target[0].classList.contains('active')){
+    sendNote(targetNote.value);
+    preNote = targetNote.value;
+  }else{
+    sendNoteOff(num)
   }
 }
+
 //タイマーを格納する変数の宣言
 var timer1;
 var step = 0;
@@ -216,12 +225,12 @@ function tmrOff(){
 
 // 現在拍表示
 function beatDisp(){
-  var beats = document.getElementsByClassName( "beat" );
-  beats[step].classList.add('active');
+  var beats = document.getElementsByClassName( "slider-container" );
+  beats[step].classList.add('beat');
   if(step==0){
-    beats[15].classList.remove('active');
+    beats[15].classList.remove('beat');
   }else{
-    beats[step-1].classList.remove('active');
+    beats[step-1].classList.remove('beat');
   }
 }
 
@@ -296,7 +305,22 @@ function sendCC(cc, val){
   }
 }
 
-// outputs[0].send([0x90,note,0x7f]);
+function sendNote(note){
+  if(output){
+    outputs[0].send([0x90,note,0x7f]);
+  }
+}
+
+function sendNoteOff(note){
+  if(output){
+    outputs[0].send([0x80,note,0x7f]);
+  }
+}
+
 
 /////////////////////////////////////////////////////////////////////////////
 </script>
+
+
+  
+</body>
